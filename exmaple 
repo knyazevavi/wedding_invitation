@@ -1,0 +1,318 @@
+
+*{
+    box-sizing: border-box;
+
+}
+
+body{
+    background-color: rgb(36, 31, 31);
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: lighter;
+    line-height: 1.5;
+    color: rgb(199, 197, 197);
+}
+
+main{
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.title-main{
+  width: 100%;
+  position: absolute; 
+  top: 37%;
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  text-align: center;
+  z-index: 1; 
+  line-height: 0.25;
+  color: rgb(211, 203, 203);
+}
+
+.title-main h2{
+  font-weight: 400;
+  font-size: 50px;
+  position: absolute;
+  left: 50px;
+  top: 250px;
+}
+
+.title-main h1{
+  font-weight: 100;
+  font-size: 202px;
+  color: rgb(238, 232, 232);
+}
+
+
+.us-photo img {
+  width: 100%;
+  height: auto;
+  opacity: 0.8;
+}
+
+  .arrow {
+    position: relative;
+    top: 270px;
+    left: 50%;
+    border-right: 0;
+    border-top: 0;
+    border-color: white;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    border-left: 0;
+    border-bottom: 0;
+    animation: moveArrow 1s infinite alternate;
+  }
+
+  .arrow::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    border: 1px solid white;
+    transform: translateY(-50%) rotate(135deg);
+
+    border-left: 0;
+    border-bottom: 0;
+  } 
+
+  
+  .arrow::before {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: 0;
+    width: 70px;
+    height: 0;
+    background: rgba(132, 129, 129, 0.764);
+    border-bottom: 1px solid white;
+    transform: rotate(90deg);
+  } 
+  
+  @keyframes moveArrow {
+    0% {
+      transform: translate(-50%, 0);
+    }
+    100% {
+      transform: translate(-50%, -10px);
+    }
+  }
+
+  .invitation{
+    position: relative;
+    top: 0; 
+    left: 0; 
+    text-align: center;
+    font-weight: 100;
+  }
+
+  .block-dear-friends{
+    margin: 0 100px;
+    position: relative;
+    top: 300px;
+    margin-bottom: 100px;
+    background-color: rgb(50, 41, 41);
+  }
+
+  .block-schedule,  .block-dresscode, .block-location{
+    margin: 100px;
+    position: relative;
+    top: 300px;
+    margin-bottom: 100px;
+    background-color: rgb(50, 41, 41);
+  }
+
+
+  .invitation-title{
+    font-size: 70px;
+  }
+
+  .invitation-text{
+    font-size: 25px;
+    margin: 40px;
+  }
+
+  .divider {
+    background: rgba(132, 129, 129, 0.764);
+    width: 40px;
+    height: 40px;
+    position: relative;
+    text-align: center;
+    top: 300px;
+    left: 50%;
+  }
+  
+  .divider::before,
+  .divider::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 40px;
+    background: rgba(132, 129, 129, 0.764);
+  }
+  
+  .divider::before {
+    transform: rotate(30deg);
+  }
+  
+  .divider::after {
+    transform: rotate(60deg);
+  }
+
+  .time-schedule{
+    margin: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto auto;
+    grid-auto-flow: row;
+    gap: 0 20px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .time-schedule > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    
+  }
+  
+  .time-schedule > div > div:first-child {
+    font-weight: bold;
+    font-size: 25px;
+    margin: 10px;
+  }
+  
+  .time-schedule > div > div:nth-child(2) {
+    font-size: 24px;
+    margin: 10px;
+    font-weight: 400;
+  }
+  
+  .time-schedule > div > div:last-child {
+    font-size: 20px;
+    margin: 10px;
+    height: 100px;
+  }
+  
+ 
+  .time-schedule > div {
+    height: auto;
+  }
+
+  .mood-board{
+    position: relative;
+  }
+
+  .mood-board img{
+    height: 800px;
+    width: 460px;
+    margin: 1px auto;
+    padding-bottom: 50px;
+  }
+
+  .btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color:  rgb(132, 129, 129);
+    border: 2px solid rgba(132, 129, 129, 0.764);
+    position: relative;
+    top: 400px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+.left{
+    left: -320px;
+  }
+
+  .right{
+    left: 320px;
+  }
+
+  .left::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 15px;
+    height: 15px;
+    border: 1px solid black;
+    transform: translateY(-50%) rotate(45deg);
+    left: 17px;
+    border-right: 0;
+    border-top: 0;
+  }
+
+  .right::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 15px;
+    height: 15px;
+    border: 1px solid black;
+    transform: translateY(-50%) rotate(45deg);
+    right: 17px;
+    border-left: 0;
+    border-bottom: 0;
+  }
+  
+
+  .btn:hover{
+    background-color:  rgb(177, 173, 173);
+  }
+
+  .house-photo{
+    position: relative;
+  }
+  
+  .house-photo img {
+    width: 70%;
+    height: auto; 
+  }
+
+  #map {
+    position: relative;
+    width:100%;
+    height: auto;
+    border: none;
+    margin: 10px auto;
+    padding-bottom: 50px;
+}
+
+.footer{
+  margin: 1px 100px;
+  top: 400px;
+  position: relative;
+  color: rgb(199, 197, 197);
+  font-size: 25px;
+  text-align: center;
+  height: 350px;
+  background-color: rgb(50, 41, 41);
+}
+
+footer > div {
+  margin: 50px auto;
+}
+
+a{
+  color: rgb(199, 197, 197);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover{
+  color: grey;
+}

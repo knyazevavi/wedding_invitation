@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wedding Invitation</title>
+    <link rel="stylesheet" href="invitation.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=e6ab4f6c-d0c2-4f56-ae4d-c61c24077348&lang=ru_RU"
+      type="text/javascript"
+    ></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="title-main">
+        <h1 class="title-names">Илья и Виктория</h1>
+        <h2 class="title">Вечеринка в честь свадьбы</h2>
+      </div>
+      <div class="us-photo">
+        <img src="./images/US.JPG" alt="our photos together" />
+      </div>
+    </header>
+    <main>
+      <div class="arrow"></div>
+      <div class="invitation">
+        <div class="block-dear-friends">
+          <div class="invitation-title">НАШИ ЛЮБИМЫЕ ДРУЗЬЯ!</div>
+          <div class="invitation-text">
+            Приглашаем Вас на нашу загородную тусовку <br />в честь нашей
+            свадьбы
+          </div>
+          <div class="invitation-title">15 июня 2024</div>
+        </div>
+        <div class="divider"></div>
+        <div class="block-schedule">
+          <div class="invitation-title">ГЛАВНЫЕ СОБЫТИЯ ДНЯ</div>
+          <div class="time-schedule">
+            <div class="guest-gathering">
+              <div>13:00</div>
+              <div>
+                СБОР
+                <br />ГОСТЕЙ
+              </div>
+              <div>Приятное общение под игристое и легкие закуски</div>
+            </div>
+            <div class="beginnig">
+              <div>14:00</div>
+              <div>НАЧАЛО <br />МЕРОПРИЯТИЯ</div>
+              <div>
+                Начало увлекательных приключений, мастер-класс от жениха и
+                невесты, интеллектуальные и не очень игры
+              </div>
+            </div>
+            <div class="wedding-cake">
+              <div>19:00</div>
+              <div>ПРАЗДНИЧНЫЙ <br />УЖИН</div>
+              <div>
+                Время вкусной еды в уютной атмосфере теплого июньского вечера
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="block-dresscode">
+          <div class="invitation-title">ДРЕСС-КОД</div>
+          <div class="invitation-text">
+            Рекомендуем взять два комлекта одежды.
+            <br />
+            Первый - для незабываемых приключений на траве, в воде и в воздухе
+            <br />Второй - для праздничного вечера. Нам будет приятно, если
+            поддержите общую атмосферу нашего мероприятия.
+          </div>
+          <div class="mood-board">
+            <button id="prev-btn" class="btn left"></button>
+            <button id="next-btn" class="btn right"></button>
+            <img
+              src="./images/dresscode.JPG"
+              alt="тут должен быть дресс-код"
+              class="gallery-img"
+            />
+            <img
+              src="./images/dresscode2.JPG"
+              alt="тут должен быть дресс-код"
+              class="gallery-img"
+            />
+            <script src="invitation.js"></script>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="block-location">
+          <div class="invitation-title">ЛОКАЦИЯ</div>
+          <div class="invitation-text">
+            Мероприятие будет проходить в загородном доме по адресу: <br />
+            Московская область, Наро-Фоминский район, деревня Новоглаголево,
+            Южная улица, 1
+          </div>
+          <div class="house-photo">
+            <img src="./images/HOUSE.jpg" alt="photo of house" />
+          </div>
+          <p class="invitation-text">
+            При возникновении сложностей можете воспользоваться картой с точными
+            координатами
+          </p>
+          <div id="map"></div>
+        </div>
+      </div>
+      <div class="divider"></div>
+    </main>
+    <footer class="footer">
+      <div class="footer-info">
+        <div class="invitation-title footer">ВАЖНАЯ ИНФОРМАЦИЯ</div>
+        <div class="invitation-text">
+          Для подтверждения присутсвия просим каждого гостя вступить в группу в
+          телеграм <br />и пройти небольшой опрос <br />Это поможет нам
+          рассчитать точное количество гостей и обсудить важные вопросы
+        </div>
+        <a href="https://t.me/+eeHH7hx4CYAxZWJi">Перейти в группу</a>
+      </div>
+      <div class="footer-info">
+        <div class="invitation-title footer">НЕ ОЧЕНЬ ВАЖНАЯ ИНФОРМАЦИЯ</div>
+        <div class="invitation-text">
+          Eсли вы заметили мы продумали все для комфортного пребывания на нашей
+          вечеринке,
+          <br />поэтому по поводу подарка можете тоже голову не ломать - конверт
+          подойдет )) <br />цветы можете положить в этот же конверт
+        </div>
+        <div class="invitation-text">
+          Постельное белье и полотенце мы тоже предусмотрели,
+          <br />
+          но если вы по каким-то причинам не готовы пользоваться тем
+          <br />
+          что предлагает дом, то возьмите свое
+        </div>
+      </div>
+    </footer>
+
+    <script src="invitation.js"></script>
+    <script>
+      ymaps.ready(init);
+
+      function init() {
+        var myMap = new ymaps.Map('map', {
+          center: [55.470658, 37.010567], // координаты вашего адреса
+          zoom: 13, // начальное увеличение
+        });
+
+        // Добавляем метку на карту
+        var myPlacemark = new ymaps.Placemark([55.476257, 37.025242], {
+          hintContent: 'Ваш загородный дом',
+        });
+        myMap.geoObjects.add(myPlacemark);
+      }
+    </script>
+  </body>
+</html>

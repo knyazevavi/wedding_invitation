@@ -1,0 +1,368 @@
+
+*{
+    box-sizing: border-box;
+
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+} 
+
+header {
+  position: relative; /* Относительное позиционирование для центрирования содержимого */
+  text-align: center; /* Центрируем содержимое внутри header */
+  padding: 0;
+  margin: 0;
+}
+
+body{
+    background-color: rgb(159, 134, 91);
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: lighter;
+    line-height: 1.5;
+    color: rgb(199, 197, 197);
+    padding-bottom: 10%;
+}
+
+main{
+  background-color: rgba(57, 52, 39, 0.899);
+  width: 90%;
+  position: relative;
+  top: -5vh;
+  margin: 0 auto;
+  padding: 0;
+  padding-bottom: 15vh;
+}
+
+.title-main{
+  width: 95vw;
+  position: absolute; 
+  top: 25%;
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  text-align: center;
+  z-index: 1; 
+  line-height: 0.25;
+  color: rgb(211, 203, 203);
+
+}
+
+.title-main h2{
+  font-weight: 400;
+  font-size: 4vw;
+  position: absolute;
+  left: 1%;
+  top: 70%;
+}
+
+.title-main h1{
+  font-weight: 100;
+  font-size: 14vw;
+  color: rgb(238, 232, 232);
+  bottom: 10%; 
+  top: 30%;
+  left: 50%; 
+  color: rgb(238, 232, 232);
+}
+
+.us-photo{
+  position: relative;
+  text-align: center;
+}
+
+.us-photo img {
+  width: 100%;
+  height: auto;
+  /* opacity: 0.8; */
+}
+
+  /* .arrow {
+    position: relative;
+    top: 0;
+    left: 50%;
+    border-color: white;
+    transform: translateX(-50%, -50%);
+    width: 8vw;
+    height: 8vw;
+    animation: moveArrow 1s infinite alternate;
+  } */
+
+  /* .arrow::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 31%;
+    width: 2vw;
+    height: 2vw;
+    border: 1px solid white;
+    transform: translateY(-50%) rotate(135deg);
+    border-left: 0;
+    border-bottom: 0;
+  }  */
+
+  
+  /* .arrow::before {
+    content: '';
+    position: absolute;
+    left: 0.1vw;
+    top: 21%;
+    width: 7vw;
+    height: 0;
+    background: rgba(132, 129, 129, 0.764);
+    border-bottom: 1px solid white;
+    transform: rotate(90deg);
+  }  */
+
+
+/*   
+  @keyframes moveArrow {
+    0% {
+      transform: translate(-50%, 0);
+    }
+    100% {
+      transform: translate(-50%, -10px);
+    }
+  } */
+
+  .invitation{
+    position: relative;
+    top: 0; 
+    left: 0; 
+    text-align: center;
+    font-weight: 100;
+  }
+
+  .block-dear-friends{
+    width: 90%;
+    margin: 0 auto;
+    /* margin-bottom: 0; */
+    position: relative;
+    top: 3vh;
+    margin-bottom: 15%;
+    /* background-color: rgb(67, 60, 60); */
+    padding-top: 5%;
+    
+  }
+
+  .block-schedule,  .block-dresscode, .block-location{
+    width: 90%;
+    margin: 15% auto;
+    position: relative;
+    top: 15vh;
+    /* background-color: rgb(50, 41, 41); */
+    padding-top: 5%;
+    padding-bottom: 10%;
+  }
+
+  .invitation-title{
+    font-size: 7vw;
+  }
+
+  .invitation-text{
+    font-size: 2vw;
+    margin: 3vh;
+  }
+
+  .divider {
+    background: rgba(132, 129, 129, 0.764);
+    width: 4vw;
+    height: 4vw;
+    position: relative;
+    text-align: center;
+    top: 13vh;
+    left: 49%;
+  }
+  
+  .divider::before,
+  .divider::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4vw;
+    width: 4vw;
+    background: rgba(132, 129, 129, 0.764);
+  }
+  
+  .divider::before {
+    transform: rotate(30deg);
+  }
+  
+  .divider::after {
+    transform: rotate(60deg);
+  }
+
+  .time-schedule{
+    margin-top: 4vh;
+    margin-bottom: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto auto;
+    grid-auto-flow: row;
+    gap: 0 2vw;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .time-schedule > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    
+  }
+  
+  .time-schedule > div > div:first-child {
+    font-weight: bold;
+    font-size: 2.5vw;
+    margin: 10%;
+  }
+  
+  .time-schedule > div > div:nth-child(2) {
+    font-size: 2.5vw;
+    margin: 1vh;
+    font-weight: 400;
+  }
+  
+  .time-schedule > div > div:last-child {
+    font-size: 1.7vw;
+    margin: 1vh;
+    height: 10vh;
+  }
+  
+ 
+  .time-schedule > div {
+    height: auto;
+  }
+
+  .mood-board{
+    position: relative;
+  }
+
+  .mood-board img{
+    position: relative;
+    top: 0;
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    padding-bottom: 5vh;
+  }
+
+  .btn {
+    width: 10%;
+    height: 10%;
+    border-radius: 50%;
+    background-color:  rgb(132, 129, 129);
+    border: 0.1vw solid rgba(132, 129, 129, 0.764);
+    position: absolute;
+    top: 37%;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .left{
+    left: 10%;
+  }
+
+  .right{
+    left: 80%;
+  }
+
+  .left::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 50%;
+    height: 50%;
+    border: 1px solid rgb(76, 68, 68);
+    transform: translateY(-50%) rotate(45deg);
+    left: 2vw;
+    border-right: 0;
+    border-top: 0;
+  }
+
+  .right::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 50%;
+    height: 50%;
+    border: 1px solid rgb(76, 68, 68);
+    transform: translateY(-50%) rotate(45deg);
+    right: 2vw;
+    border-left: 0;
+    border-bottom: 0;
+  }
+  
+
+  .btn:hover{
+    background-color:  rgb(177, 173, 173);
+  }
+
+  .house-photo{
+    position: relative;
+  }
+  
+  .house-photo img {
+    width: 70%;
+    height: auto; 
+  }
+
+  #map {
+    position: relative;
+    border: none;
+    margin: 0 auto;
+    width: 90%; 
+    height: 30vh;
+    /* height: 40%; */
+}
+
+footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -5.09vh;
+  bottom: 0;
+  width: 90%;
+  margin: 0 auto;
+  color: rgb(199, 197, 197);
+  font-size: 2vw;
+  text-align: center;
+  background-color: rgba(57, 52, 39, 0.899);;
+  padding-top: 15%; 
+  padding-bottom: 10%;
+}
+
+.footer{
+  line-height: 1;
+}
+
+.footer-info{
+  line-height: 1.5;
+  margin: 10% auto;
+}
+
+a{
+  color: rgb(199, 197, 197);
+  text-decoration: none;
+  background-color: rgba(132, 129, 129, 0.764);
+  border: 0.1vh solid rgb(76, 68, 68);
+  padding: 2vh;
+  position: relative;
+  top:  2vh;
+}
+
+a:hover{
+  color: grey;
+}
+
+
