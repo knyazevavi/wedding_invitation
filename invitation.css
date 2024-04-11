@@ -80,53 +80,7 @@ main{
   /* opacity: 0.8; */
 }
 
-  /* .arrow {
-    position: relative;
-    top: 0;
-    left: 50%;
-    border-color: white;
-    transform: translateX(-50%, -50%);
-    width: 8vw;
-    height: 8vw;
-    animation: moveArrow 1s infinite alternate;
-  } */
 
-  /* .arrow::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 31%;
-    width: 2vw;
-    height: 2vw;
-    border: 1px solid white;
-    transform: translateY(-50%) rotate(135deg);
-    border-left: 0;
-    border-bottom: 0;
-  }  */
-
-  
-  /* .arrow::before {
-    content: '';
-    position: absolute;
-    left: 0.1vw;
-    top: 21%;
-    width: 7vw;
-    height: 0;
-    background: rgba(132, 129, 129, 0.764);
-    border-bottom: 1px solid white;
-    transform: rotate(90deg);
-  }  */
-
-
-/*   
-  @keyframes moveArrow {
-    0% {
-      transform: translate(-50%, 0);
-    }
-    100% {
-      transform: translate(-50%, -10px);
-    }
-  } */
 
   .invitation{
     position: relative;
@@ -139,23 +93,23 @@ main{
   .block-dear-friends{
     width: 90%;
     margin: 0 auto;
-    /* margin-bottom: 0; */
     position: relative;
     top: 3vh;
-    margin-bottom: 15%;
-    /* background-color: rgb(67, 60, 60); */
+    margin-bottom: 0;
     padding-top: 5%;
-    
   }
 
-  .block-schedule,  .block-dresscode, .block-location{
+  .block-schedule,  .block-dresscode, .block-location, .block-footer{
     width: 90%;
-    margin: 15% auto;
+    margin: 5% auto;
     position: relative;
     top: 15vh;
-    /* background-color: rgb(50, 41, 41); */
     padding-top: 5%;
     padding-bottom: 10%;
+  }
+
+  .block-location{
+    padding-bottom: 20%;
   }
 
   .invitation-title{
@@ -163,8 +117,8 @@ main{
   }
 
   .invitation-text{
-    font-size: 2vw;
-    margin: 3vh;
+    font-size: 3vw;
+    margin: 3vh 0;
   }
 
   .divider {
@@ -232,7 +186,7 @@ main{
   }
   
   .time-schedule > div > div:last-child {
-    font-size: 1.7vw;
+    font-size: 2vw;
     margin: 1vh;
     height: 10vh;
   }
@@ -283,7 +237,7 @@ main{
     height: 50%;
     border: 1px solid rgb(76, 68, 68);
     transform: translateY(-50%) rotate(45deg);
-    left: 2vw;
+    left: 2.5vw;
     border-right: 0;
     border-top: 0;
   }
@@ -296,7 +250,7 @@ main{
     height: 50%;
     border: 1px solid rgb(76, 68, 68);
     transform: translateY(-50%) rotate(45deg);
-    right: 2vw;
+    right: 2.5vw;
     border-left: 0;
     border-bottom: 0;
   }
@@ -324,23 +278,14 @@ main{
     /* height: 40%; */
 }
 
-footer{
+.block-footer{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
-  top: -5.09vh;
-  bottom: 0;
-  width: 90%;
-  margin: 0 auto;
-  color: rgb(199, 197, 197);
-  font-size: 2vw;
   text-align: center;
-  background-color: rgba(57, 52, 39, 0.899);;
-  padding-top: 15%; 
-  padding-bottom: 10%;
 }
+
 
 .footer{
   line-height: 1;
@@ -349,16 +294,24 @@ footer{
 .footer-info{
   line-height: 1.5;
   margin: 10% auto;
+
 }
 
+.footer-info > div{
+  margin: 10% auto;
+}
+
+
 a{
-  color: rgb(199, 197, 197);
+  color: rgb(76, 68, 68);
   text-decoration: none;
   background-color: rgba(132, 129, 129, 0.764);
   border: 0.1vh solid rgb(76, 68, 68);
-  padding: 2vh;
+  padding: 3vh;
   position: relative;
   top:  2vh;
+  font-weight: 400;
+  font-size: 2vh;
 }
 
 a:hover{

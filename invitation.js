@@ -36,20 +36,24 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Добавляем обработчик события touchstart для начала касания
   images.forEach((img, index) => {
-    img.addEventListener('touchstart', function (event) {
-      event.preventDefault(); // предотвращаем стандартное действие при касании
-      currentImgIndex = index;
-      showImage(currentImgIndex);
-    });
-  });
-
-  // Добавляем обработчик события touchend для завершения касания
-  images.forEach((img, index) => {
-    img.addEventListener('touchend', function (event) {
-      event.preventDefault(); // предотвращаем стандартное действие при завершении касания
-      // Дополнительные действия, если нужно
+    img.addEventListener('touchmove', function (event) {
+      event.preventDefault(); // предотвращаем стандартное действие при проведении пальцем
+      const touch = event.touches[0];
+      const deltaX = startX - touch.clientX;
+      const deltaY = startY - touch.clientY;
+      // Проверяем направление проведения
+      if (Math.abs(deltaX) > Math.abs(deltaY)) {
+        // Горизонтальное проведение
+        if (deltaX > 0) {
+          // Переключаем на следующее изображение при проведении влево
+          currentImgIndex = (index + 1) % images.length;
+        } else {
+          // Переключаем на предыдущее изображение при проведении вправо
+          currentImgIndex = (index - 1 + images.length) % images.length;
+        }
+        showImage(currentImgIndex);
+      }
     });
   });
 
