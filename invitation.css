@@ -310,12 +310,13 @@ a{
   padding: 3vh;
   position: relative;
   top:  2vh;
-  font-weight: 400;
-  font-size: 2vh;
+  font-size: 3vw;
 }
 
 a:hover{
   color: grey;
+  background-color: rgb(76, 68, 68);
+  border: grey;
 }
 
 
