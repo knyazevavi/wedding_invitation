@@ -32,7 +32,7 @@ main{
   background-color: rgba(57, 52, 39, 0.899);
   width: 90%;
   position: relative;
-  top: -5vh;
+  top: -5.5vh;
   margin: 0 auto;
   padding: 0;
   padding-bottom: 15vh;
@@ -95,7 +95,6 @@ main{
     margin: 0 auto;
     position: relative;
     top: 3vh;
-    margin-bottom: 0;
     padding-top: 5%;
   }
 
@@ -103,22 +102,17 @@ main{
     width: 90%;
     margin: 5% auto;
     position: relative;
-    top: 15vh;
+    top: 14vh;
     padding-top: 5%;
     padding-bottom: 10%;
   }
 
+  .block-schedule{
+    padding-bottom: 5vh;
+  }
+
   .block-location{
     padding-bottom: 20%;
-  }
-
-  .invitation-title{
-    font-size: 7vw;
-  }
-
-  .invitation-text{
-    font-size: 3vw;
-    margin: 3vh 0;
   }
 
   .divider {
@@ -127,8 +121,9 @@ main{
     height: 4vw;
     position: relative;
     text-align: center;
-    top: 13vh;
+    top: 7vh;
     left: 49%;
+    margin-top: 10%;
   }
   
   .divider::before,
@@ -149,6 +144,16 @@ main{
   .divider::after {
     transform: rotate(60deg);
   }
+  .invitation-title{
+    font-size: 7vw;
+  }
+
+  .invitation-text{
+    font-size: 3vw;
+    margin: 3vh 0;
+  }
+
+ 
 
   .time-schedule{
     margin-top: 4vh;
@@ -159,38 +164,45 @@ main{
     grid-auto-flow: row;
     gap: 0 2vw;
     justify-content: center;
-    align-items: center;
+    align-items: stretch; /* Растягиваем ячейки по высоте */
+    align-content: center; /* Растягиваем контент по высоте */
     position: relative;
   }
 
   .time-schedule > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     text-align: center;
     margin: 0;
-    
+    padding: 10px; /* Добавляем отступы для улучшенного внешнего вида */
+  }
+  
+  .time-schedule > div > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
   }
   
   .time-schedule > div > div:first-child {
+    height: 15%; /* Устанавливаем высоту 100% для каждого внутреннего div */
     font-weight: bold;
     font-size: 2.5vw;
     margin: 10%;
   }
   
   .time-schedule > div > div:nth-child(2) {
+    height: 25%;
     font-size: 2.5vw;
     margin: 1vh;
     font-weight: 400;
   }
   
   .time-schedule > div > div:last-child {
+    height: 60%;
     font-size: 2vw;
     margin: 1vh;
-    height: 10vh;
+    height: 50%;
   }
-  
  
   .time-schedule > div {
     height: auto;
@@ -203,15 +215,15 @@ main{
   .mood-board img{
     position: relative;
     top: 0;
-    width: 50%;
+    width: 70%;
     height: auto;
-    margin: 0 auto;
+    margin: 10% auto 0;
     padding-bottom: 5vh;
   }
 
   .btn {
-    width: 10%;
-    height: 10%;
+    width: 8vw;
+    height: 8vw;
     border-radius: 50%;
     background-color:  rgb(132, 129, 129);
     border: 0.1vw solid rgba(132, 129, 129, 0.764);
@@ -222,20 +234,20 @@ main{
   }
 
   .left{
-    left: 10%;
+    left: 3%;
   }
 
   .right{
-    left: 80%;
+    left: 88%;
   }
 
-  .left::before {
+  .left::before{
     content: '';
     position: absolute;
     top: 50%;
     width: 50%;
     height: 50%;
-    border: 1px solid rgb(76, 68, 68);
+    border: 0.5px solid rgb(76, 68, 68);
     transform: translateY(-50%) rotate(45deg);
     left: 2.5vw;
     border-right: 0;
@@ -248,7 +260,7 @@ main{
     top: 50%;
     width: 50%;
     height: 50%;
-    border: 1px solid rgb(76, 68, 68);
+    border: 0.5px solid rgb(76, 68, 68);
     transform: translateY(-50%) rotate(45deg);
     right: 2.5vw;
     border-left: 0;
@@ -279,6 +291,9 @@ main{
 }
 
 .block-footer{
+  margin: 5% auto;
+  top: 10vh;
+  padding-top: 2%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -293,7 +308,7 @@ main{
 
 .footer-info{
   line-height: 1.5;
-  margin: 10% auto;
+  margin: 5% auto;
 
 }
 
@@ -303,7 +318,7 @@ main{
 
 
 a{
-  color: rgb(76, 68, 68);
+  color: rgb(39, 35, 35);
   text-decoration: none;
   background-color: rgba(132, 129, 129, 0.764);
   border: 0.1vh solid rgb(76, 68, 68);
@@ -311,6 +326,7 @@ a{
   position: relative;
   top:  2vh;
   font-size: 3vw;
+  font-weight: 300;
 }
 
 a:hover{
